@@ -1,0 +1,128 @@
+# =====================================================================
+# GITIGNORE - GEMINI AI CHATBOT (FULL-STACK APPLICATION)
+# Excludes secrets, dependencies, logs, caches, and system files
+# =====================================================================
+
+# ---------------------------------------------------------------------
+# 1. Environment Variables & Secret Credentials (CRITICAL)
+# NEVER commit private API keys (Gemini, Supabase service role, etc.)
+# ---------------------------------------------------------------------
+.env
+.env.*
+*.env
+backend/.env
+backend/.env.*
+backend/.env.local
+frontend/.env
+frontend/.env.*
+frontend/.env.local
+
+# Preserve template and example files for team setup
+!.env.example
+!*.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# ---------------------------------------------------------------------
+# 2. Dependency Directories
+# ---------------------------------------------------------------------
+node_modules/
+*/node_modules/
+backend/node_modules/
+.pnpm-store/
+
+# ---------------------------------------------------------------------
+# 3. Logs & Process Artifacts
+# ---------------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ---------------------------------------------------------------------
+# 4. Build Outputs, Bundles & Caches
+# ---------------------------------------------------------------------
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+tmp/
+temp/
+
+# ---------------------------------------------------------------------
+# 5. Testing & Code Coverage
+# ---------------------------------------------------------------------
+coverage/
+.nyc_output/
+*.lcov
+reports/
+
+# ---------------------------------------------------------------------
+# 6. IDE & Editor Specific Files
+# ---------------------------------------------------------------------
+# Visual Studio Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+*.iws
+*.iml
+
+# Other editors
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
+
+# ---------------------------------------------------------------------
+# 7. Operating System Artifacts
+# ---------------------------------------------------------------------
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ---------------------------------------------------------------------
+# 8. Local Scratch, Backups & Agent Files
+# ---------------------------------------------------------------------
+scratch/
+*.local
+.gemini/
+.agents/
